@@ -58,16 +58,8 @@ public class calktest {
 
     @Test
     public void addTest() {
-        ArrayList<WebElement> nums = new ArrayList();
-        nums.add(mainPage.numZero);
-        nums.add(mainPage.numOne);
-        nums.add(mainPage.numTwo);
-        nums.add(mainPage.numThree);
-        nums.add(mainPage.numFour);
-        nums.add(mainPage.numFive);
-        nums.add(mainPage.numSix);
-        WebElement x = nums.get(firstI);
-        WebElement y = nums.get(secondI);
+        WebElement x = mainPage.nums.get(firstI);
+        WebElement y = mainPage.nums.get(secondI);
         x.click();
         mainPage.smPlus.click();
         y.click();

@@ -5,12 +5,27 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+
 
 public class MainPage {
+    public ArrayList<WebElement> nums;
     public AndroidDriver driver;
     public MainPage(AndroidDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver = driver; }
+        this.driver = driver;
+        nums = new ArrayList();
+        nums.add(numZero);
+        nums.add(numOne);
+        nums.add(numTwo);
+        nums.add(numThree);
+        nums.add(numFour);
+        nums.add(numFive);
+        nums.add(numSix);
+        nums.add(numSeven);
+        nums.add(numEight);
+        nums.add(numNine);
+    }
 
     @FindBy(id ="com.google.android.calculator:id/result" )
     public WebElement resultField;
@@ -50,5 +65,9 @@ public class MainPage {
 
     @FindBy(id = "com.google.android.calculator:id/eq")
     public WebElement smEquals;
+
+
+
+
 
 }
